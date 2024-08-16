@@ -7,7 +7,7 @@
 <body>
     <h1 th:text="#{page.title}">Thymeleaf 課題</h1>
     <h2 th:text="#{page.subtitle.output}">出力画面</h2>
-    <p th:text="#{text.inputValue(val)}">入力された値は「{val}」です。</p>
+    <p th:text="#{text.inputValue(${val})}">入力された値は「${val}」です。</p>
     <p><a th:href="@{/input(previous=${previous})}" th:text="#{link.backToInput}">入力画面へ戻る</a></p>
 </body>
 </html>
