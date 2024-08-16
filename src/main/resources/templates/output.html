@@ -1,16 +1,13 @@
-
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
-    <title>Tutorial of Thymeleaf</title>
+    <title th:text="#{page.title}">Tutorial of Thymeleaf</title>
 </head>
 <body>
-    <h1>Thymeleaf 課題</h1>　
-    <h2>出力画面</h2>
-    <p th:text="'入力された値は「' + ${val} + '」です。'"></p>
-    <p><a th:href="@{/input(previous=${previous})}">入力画面へ戻る</a></p>
+    <h1 th:text="#{page.title}">Thymeleaf 課題</h1>
+    <h2 th:text="#{page.subtitle.output}">出力画面</h2>
+    <p th:text="#{text.inputValue(val)}">入力された値は「{val}」です。</p>
+    <p><a th:href="@{/input(previous=${previous})}" th:text="#{link.backToInput}">入力画面へ戻る</a></p>
 </body>
 </html>
-
-
