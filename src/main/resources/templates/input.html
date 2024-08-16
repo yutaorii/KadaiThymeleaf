@@ -11,7 +11,7 @@
 
     <!-- previous パラメータが設定されている場合の表示 -->
     <div th:if="${previous != null}">
-        <p th:text="#{text.previousValue(previous)}"></p>
+        <p th:text="#{text.previousValue(${previous})}"></p>
     </div>
 
     <form method="post" action="/output">
@@ -20,3 +20,5 @@
     </form>
 </body>
 </html>
+
+
